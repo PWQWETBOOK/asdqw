@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuyLedgerH Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --app-background-color: #101723;
+      --bg: #101723;
+      --bg-start: #111827;
+      --bg-end: #0f1f1d;
+      --surface: #17202d;
+      --surface-soft: #1d2735;
+      --ink: #f8fafc;
+      --body: #c8d1df;
+      --muted: #9aa7b8;
+      --line: #2f3b4d;
+      --line-soft: #293548;
+      --accent: #2dd4bf;
+      --accent-dark: #0f766e;
+      --accent-text: #7ddfd4;
+      --accent-soft: rgba(45, 212, 191, 0.13);
+      --accent-border: rgba(94, 234, 212, 0.35);
+      --gold: #fbbf24;
+      --gold-soft: rgba(120, 53, 15, 0.25);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background-color: var(--app-background-color);
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 34rem),
+        radial-gradient(circle at 88% 12%, rgba(251, 191, 36, 0.08), transparent 26rem),
+        linear-gradient(135deg, var(--bg-start) 0%, var(--bg) 48%, var(--bg-end) 100%);
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    .document {
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(32px, 6vw, 72px);
+      color: #ffffff;
+      background:
+        linear-gradient(180deg, rgba(29, 39, 53, 0.96), rgba(23, 32, 45, 0.98)),
+        linear-gradient(90deg, rgba(45, 212, 191, 0.16), transparent);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
+      color: var(--accent-text);
+      background: var(--accent-soft);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .badge::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 26px 0 16px;
+      font-size: clamp(2.35rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.28rem);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-item {
+      min-height: 112px;
+      padding: 24px;
+      background: var(--surface-soft);
+    }
+
+    .meta-label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 750;
+      color: var(--ink);
+    }
+
+    .content {
+      padding: clamp(28px, 5vw, 64px);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 44px;
+      padding: 24px;
+      border: 1px solid var(--accent-border);
+      border-radius: 18px;
+      background: var(--accent-soft);
+    }
+
+    .summary-icon {
+      display: grid;
+      width: 56px;
+      height: 56px;
+      place-items: center;
+      border-radius: 16px;
+      color: #ffffff;
+      background: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .summary h2 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .summary p {
+      margin: 0;
+      color: var(--body);
+    }
+
+    section {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--body);
+    }
+
+    ul {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      margin: 12px 0;
+      padding-left: 30px;
+      color: var(--body);
+    }
+
+    li::before {
+      position: absolute;
+      top: 0.58em;
+      left: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .statement {
+      margin: 30px 0 8px;
+      padding: 22px;
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      background: var(--gold-soft);
+      color: #f6d9a6;
+      font-weight: 650;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px clamp(28px, 5vw, 64px);
+      border-top: 1px solid var(--line);
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer strong {
+      color: var(--ink);
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 20px, 1040px);
+        padding: 20px 0;
+      }
+
+      .document {
+        border-radius: 18px;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .document {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    /* Premium visual refresh */
+    :root {
+      --app-background-color: #070812;
+      --bg: #070812;
+      --bg-start: #070812;
+      --bg-end: #07120f;
+      --surface: rgba(15, 23, 42, 0.8);
+      --surface-soft: rgba(18, 26, 43, 0.78);
+      --ink: #fbfcff;
+      --body: #dbe3f0;
+      --muted: #a7b3c5;
+      --line: rgba(199, 210, 254, 0.2);
+      --line-soft: rgba(199, 210, 254, 0.14);
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+      --accent-text: #bae6fd;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-border: rgba(125, 211, 252, 0.36);
+      --gold: #f59e0b;
+      --gold-soft: rgba(245, 158, 11, 0.13);
+      --shadow: 0 34px 100px rgba(0, 0, 0, 0.46);
+    }
+
+    body {
+      background:
+        linear-gradient(90deg, rgba(125, 211, 252, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(199, 210, 254, 0.035) 1px, transparent 1px),
+        conic-gradient(from 210deg at 78% 10%, rgba(245, 158, 11, 0.16), transparent 17%, rgba(56, 189, 248, 0.18), transparent 36%),
+        linear-gradient(135deg, #070812 0%, #0e1626 46%, #07120f 100%);
+      background-size: 54px 54px, 54px 54px, auto, auto;
+      overflow-x: hidden;
+      isolation: isolate;
+    }
+
+    body::before,
+    body::after {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+    }
+
+    body::before {
+      background:
+        linear-gradient(115deg, transparent 0 22%, rgba(56, 189, 248, 0.15) 22.2%, transparent 22.8% 50%, rgba(52, 211, 153, 0.11) 50.3%, transparent 51%),
+        repeating-linear-gradient(135deg, transparent 0 98px, rgba(255, 255, 255, 0.05) 99px, transparent 100px);
+      -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.56) 58%, transparent 100%);
+      mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.56) 58%, transparent 100%);
+    }
+
+    body::after {
+      background:
+        repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 5px);
+      opacity: 0.36;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 40px));
+      padding: clamp(24px, 4vw, 54px) 0;
+    }
+
+    .document {
+      position: relative;
+      border-color: rgba(226, 232, 240, 0.18);
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 220px),
+        rgba(15, 23, 42, 0.8);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .document::before {
+      position: absolute;
+      inset: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: inherit;
+      pointer-events: none;
+      content: "";
+    }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      padding: clamp(34px, 7vw, 82px);
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent 28%),
+        linear-gradient(135deg, rgba(56, 189, 248, 0.2), transparent 42%),
+        linear-gradient(100deg, rgba(17, 24, 39, 0.95), rgba(8, 13, 25, 0.78));
+      overflow: hidden;
+    }
+
+    .hero::before {
+      position: absolute;
+      right: clamp(20px, 6vw, 78px);
+      bottom: clamp(16px, 4vw, 48px);
+      width: min(380px, 42vw);
+      height: min(220px, 28vw);
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      border-radius: 24px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(52, 211, 153, 0.06));
+      background-size: 42px 42px, 42px 42px, auto;
+      content: "";
+      opacity: 0.62;
+      transform: perspective(520px) rotateX(58deg) rotateZ(-13deg);
+      transform-origin: center;
+    }
+
+    .hero>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      border-radius: 999px;
+      letter-spacing: 0.1em;
+      box-shadow: inset 0 0 26px rgba(56, 189, 248, 0.08);
+    }
+
+    h1 {
+      max-width: 880px;
+      font-size: clamp(2.7rem, 7vw, 6rem);
+      line-height: 0.9;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      font-size: clamp(1.02rem, 1.8vw, 1.32rem);
+      line-height: 1.7;
+    }
+
+    .policy-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .policy-highlights span {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      padding: 0 16px;
+      border: 1px solid rgba(226, 232, 240, 0.16);
+      border-radius: 999px;
+      color: var(--body);
+      background: rgba(255, 255, 255, 0.055);
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .meta-grid {
+      gap: 0;
+      border-color: rgba(226, 232, 240, 0.14);
+      background: rgba(226, 232, 240, 0.12);
+    }
+
+    .meta-item {
+      min-height: 126px;
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+        rgba(18, 26, 43, 0.78);
+    }
+
+    .meta-label {
+      color: var(--accent-text);
+    }
+
+    .content {
+      padding: clamp(28px, 5vw, 70px);
+    }
+
+    .summary {
+      grid-template-columns: 64px 1fr;
+      margin-bottom: 34px;
+      padding: 28px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.15), transparent 54%),
+        rgba(255, 255, 255, 0.045);
+    }
+
+    .summary-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #38bdf8, #34d399);
+      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.22);
+    }
+
+    section {
+      position: relative;
+      padding: 32px 0 32px 34px;
+      border-top-color: rgba(226, 232, 240, 0.13);
+    }
+
+    section::before {
+      position: absolute;
+      top: 39px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--accent);
+      border-radius: 6px;
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    section:first-of-type::before {
+      top: 7px;
+    }
+
+    h2 {
+      font-size: clamp(1.42rem, 2.6vw, 2rem);
+    }
+
+    li::before {
+      border-radius: 4px;
+      background: linear-gradient(145deg, #38bdf8, #34d399);
+      transform: rotate(45deg);
+    }
+
+    .statement {
+      border-left: 0;
+      border: 1px solid rgba(251, 191, 36, 0.34);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(245, 158, 11, 0.18), transparent),
+        rgba(245, 158, 11, 0.08);
+      box-shadow: inset 0 0 28px rgba(245, 158, 11, 0.05);
+    }
+
+    .footer {
+      border-top-color: rgba(226, 232, 240, 0.14);
+      background: rgba(18, 26, 43, 0.78);
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 24px, 1040px);
+        padding: 18px 0;
+      }
+
+      .document {
+        border-radius: 24px;
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 28px 20px;
+      }
+
+      .hero::before {
+        display: none;
+      }
+
+      section {
+        padding-left: 24px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="document" aria-labelledby="policy-title">
+      <header class="hero">
+        <div class="badge">Privacy First</div>
+        <h1 id="policy-title">BuyLedgerH Privacy Policy</h1>
+        <p class="subtitle">
+          A clear privacy policy for BuyLedgerH. The app is a local-first purchase log
+          for item names, prices, stores, receipt references, notes, and reminders.
+        </p>
+        <div class="policy-highlights" aria-label="Privacy highlights">
+          <span>No tracking</span>
+          <span>No accounts</span>
+          <span>No data sale</span>
+        </div>
+      </header>
+
+      <div class="meta-grid" aria-label="Policy details">
+        <div class="meta-item">
+          <p class="meta-label">Application</p>
+          <p class="meta-value">BuyLedgerH</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Effective Date</p>
+          <p class="meta-value">April 21, 2026</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Contact</p>
+          <p class="meta-value"><a href="mailto:buyledger@example.com">buyledger@example.com</a></p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="summary">
+          <div class="summary-icon" aria-hidden="true">✓</div>
+          <div>
+            <h2>Zero Data Collection</h2>
+            <p>
+              BuyLedgerH does not require an account, subscription, in-app purchase, or paid unlock.
+              Purchase records are stored locally on the device.
+            </p>
+          </div>
+        </div>
+
+        <section>
+          <h2>1. Introduction</h2>
+          <p>
+            This Privacy Policy explains how BuyLedgerH handles privacy when you use the BuyLedgerH
+            mobile application. We believe privacy should be clear, respectful, and easy to
+            understand. Because BuyLedgerH does not collect user information, this policy is designed
+            to make that position transparent.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information We Collect</h2>
+          <p>
+            BuyLedgerH does not collect any personal information, non-personal information, device
+            identifiers, location data, contact information, photos, files, analytics data, crash
+            logs, advertising identifiers, or behavioral usage data from users.
+          </p>
+          <ul>
+            <li>No account registration is required.</li>
+            <li>No names, email addresses, phone numbers, or contact lists are collected.</li>
+            <li>No precise or approximate location data is collected.</li>
+            <li>No analytics, advertising, profiling, or cross-app tracking is used.</li>
+            <li>No user content is uploaded to servers operated by BuyLedgerH.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. How We Use Information</h2>
+          <p>
+            Since BuyLedgerH does not collect user information, we do not use user information for
+            any purpose. We do not analyze, process, profile, sell, rent, disclose, or monetize
+            personal information.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. Data Sharing and Disclosure</h2>
+          <p>
+            BuyLedgerH does not share user information with third parties because no user information
+            is collected. We do not sell personal data, disclose personal data to advertisers, or
+            transfer user information to external analytics providers.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Data Storage and Security</h2>
+          <p>
+            BuyLedgerH does not maintain servers, databases, or cloud storage systems containing user
+            information. Because no user information is collected by BuyLedgerH, there is no personal
+            data stored by us to secure, retain, or delete.
+          </p>
+          <p class="statement">
+            In short: BuyLedgerH is built so that your purchase records stay with you.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Children&apos;s Privacy</h2>
+          <p>
+            BuyLedgerH does not knowingly collect information from children or from any other users.
+            If you believe that any information has been provided to us by mistake, please contact
+            us so we can review the matter.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Third-Party Services</h2>
+          <p>
+            BuyLedgerH does not integrate third-party analytics, advertising networks, or tracking
+            tools that collect user information through the app. If the app is distributed through
+            an app store, the store operator may process information under its own privacy policy.
+            Such processing is controlled by the app store provider, not by BuyLedgerH.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Your Privacy Rights</h2>
+          <p>
+            Depending on your location, privacy laws may provide rights related to access,
+            deletion, correction, portability, restriction, objection, or withdrawal of consent.
+            Because BuyLedgerH does not collect user information, we generally do not hold personal
+            data that can be accessed, corrected, or deleted. You may still contact us with any
+            privacy-related question.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect app changes, legal
+            requirements, or operational updates. If we make changes, we will update the effective
+            date shown at the top of this policy.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Contact Us</h2>
+          <p>
+            If you have questions about this Privacy Policy or BuyLedgerH&apos;s privacy practices,
+            please contact us at <a href="mailto:buyledger@example.com">buyledger@example.com</a>.
+          </p>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <span><strong>BuyLedgerH</strong> Privacy Policy</span>
+        <span>Effective Date: April 21, 2026</span>
+      </footer>
+    </article>
+  </main>
+</body>
+
+</html>
