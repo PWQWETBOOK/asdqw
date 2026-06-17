@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海星体育-赛事直播隐私政策</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --app-background-color: #101723;
+      --bg: #101723;
+      --bg-start: #111827;
+      --bg-end: #0f1f1d;
+      --surface: #17202d;
+      --surface-soft: #1d2735;
+      --ink: #f8fafc;
+      --body: #c8d1df;
+      --muted: #9aa7b8;
+      --line: #2f3b4d;
+      --line-soft: #293548;
+      --accent: #2dd4bf;
+      --accent-dark: #0f766e;
+      --accent-text: #7ddfd4;
+      --accent-soft: rgba(45, 212, 191, 0.13);
+      --accent-border: rgba(94, 234, 212, 0.35);
+      --gold: #fbbf24;
+      --gold-soft: rgba(120, 53, 15, 0.25);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background-color: var(--app-background-color);
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 34rem),
+        radial-gradient(circle at 88% 12%, rgba(251, 191, 36, 0.08), transparent 26rem),
+        linear-gradient(135deg, var(--bg-start) 0%, var(--bg) 48%, var(--bg-end) 100%);
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    .document {
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(32px, 6vw, 72px);
+      color: #ffffff;
+      background:
+        linear-gradient(180deg, rgba(29, 39, 53, 0.96), rgba(23, 32, 45, 0.98)),
+        linear-gradient(90deg, rgba(45, 212, 191, 0.16), transparent);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
+      color: var(--accent-text);
+      background: var(--accent-soft);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .badge::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 26px 0 16px;
+      font-size: clamp(2.35rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.28rem);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-item {
+      min-height: 112px;
+      padding: 24px;
+      background: var(--surface-soft);
+    }
+
+    .meta-label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 750;
+      color: var(--ink);
+    }
+
+    .content {
+      padding: clamp(28px, 5vw, 64px);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 44px;
+      padding: 24px;
+      border: 1px solid var(--accent-border);
+      border-radius: 18px;
+      background: var(--accent-soft);
+    }
+
+    .summary-icon {
+      display: grid;
+      width: 56px;
+      height: 56px;
+      place-items: center;
+      border-radius: 16px;
+      color: #ffffff;
+      background: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .summary h2 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .summary p {
+      margin: 0;
+      color: var(--body);
+    }
+
+    section {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--body);
+    }
+
+    ul {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      margin: 12px 0;
+      padding-left: 30px;
+      color: var(--body);
+    }
+
+    li::before {
+      position: absolute;
+      top: 0.58em;
+      left: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .statement {
+      margin: 30px 0 8px;
+      padding: 22px;
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      background: var(--gold-soft);
+      color: #f6d9a6;
+      font-weight: 650;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px clamp(28px, 5vw, 64px);
+      border-top: 1px solid var(--line);
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer strong {
+      color: var(--ink);
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 20px, 1040px);
+        padding: 20px 0;
+      }
+
+      .document {
+        border-radius: 18px;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .document {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    /* Premium visual refresh */
+    :root {
+      --app-background-color: #070812;
+      --bg: #070812;
+      --bg-start: #070812;
+      --bg-end: #07120f;
+      --surface: rgba(15, 23, 42, 0.8);
+      --surface-soft: rgba(18, 26, 43, 0.78);
+      --ink: #fbfcff;
+      --body: #dbe3f0;
+      --muted: #a7b3c5;
+      --line: rgba(199, 210, 254, 0.2);
+      --line-soft: rgba(199, 210, 254, 0.14);
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+      --accent-text: #bae6fd;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-border: rgba(125, 211, 252, 0.36);
+      --gold: #f59e0b;
+      --gold-soft: rgba(245, 158, 11, 0.13);
+      --shadow: 0 34px 100px rgba(0, 0, 0, 0.46);
+    }
+
+    body {
+      background:
+        linear-gradient(90deg, rgba(125, 211, 252, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(199, 210, 254, 0.035) 1px, transparent 1px),
+        conic-gradient(from 210deg at 78% 10%, rgba(245, 158, 11, 0.16), transparent 17%, rgba(56, 189, 248, 0.18), transparent 36%),
+        linear-gradient(135deg, #070812 0%, #0e1626 46%, #07120f 100%);
+      background-size: 54px 54px, 54px 54px, auto, auto;
+      overflow-x: hidden;
+      isolation: isolate;
+    }
+
+    body::before,
+    body::after {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+    }
+
+    body::before {
+      background:
+        linear-gradient(115deg, transparent 0 22%, rgba(56, 189, 248, 0.15) 22.2%, transparent 22.8% 50%, rgba(52, 211, 153, 0.11) 50.3%, transparent 51%),
+        repeating-linear-gradient(135deg, transparent 0 98px, rgba(255, 255, 255, 0.05) 99px, transparent 100px);
+      -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.56) 58%, transparent 100%);
+      mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.56) 58%, transparent 100%);
+    }
+
+    body::after {
+      background:
+        repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 5px);
+      opacity: 0.36;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 40px));
+      padding: clamp(24px, 4vw, 54px) 0;
+    }
+
+    .document {
+      position: relative;
+      border-color: rgba(226, 232, 240, 0.18);
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 220px),
+        rgba(15, 23, 42, 0.8);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .document::before {
+      position: absolute;
+      inset: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: inherit;
+      pointer-events: none;
+      content: "";
+    }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      padding: clamp(34px, 7vw, 82px);
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent 28%),
+        linear-gradient(135deg, rgba(56, 189, 248, 0.2), transparent 42%),
+        linear-gradient(100deg, rgba(17, 24, 39, 0.95), rgba(8, 13, 25, 0.78));
+      overflow: hidden;
+    }
+
+    .hero::before {
+      position: absolute;
+      right: clamp(20px, 6vw, 78px);
+      bottom: clamp(16px, 4vw, 48px);
+      width: min(380px, 42vw);
+      height: min(220px, 28vw);
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      border-radius: 24px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(52, 211, 153, 0.06));
+      background-size: 42px 42px, 42px 42px, auto;
+      content: "";
+      opacity: 0.62;
+      transform: perspective(520px) rotateX(58deg) rotateZ(-13deg);
+      transform-origin: center;
+    }
+
+    .hero>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      border-radius: 999px;
+      letter-spacing: 0.1em;
+      box-shadow: inset 0 0 26px rgba(56, 189, 248, 0.08);
+    }
+
+    h1 {
+      max-width: 880px;
+      font-size: clamp(2.7rem, 7vw, 6rem);
+      line-height: 0.9;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      font-size: clamp(1.02rem, 1.8vw, 1.32rem);
+      line-height: 1.7;
+    }
+
+    .policy-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .policy-highlights span {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      padding: 0 16px;
+      border: 1px solid rgba(226, 232, 240, 0.16);
+      border-radius: 999px;
+      color: var(--body);
+      background: rgba(255, 255, 255, 0.055);
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .meta-grid {
+      gap: 0;
+      border-color: rgba(226, 232, 240, 0.14);
+      background: rgba(226, 232, 240, 0.12);
+    }
+
+    .meta-item {
+      min-height: 126px;
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+        rgba(18, 26, 43, 0.78);
+    }
+
+    .meta-label {
+      color: var(--accent-text);
+    }
+
+    .content {
+      padding: clamp(28px, 5vw, 70px);
+    }
+
+    .summary {
+      grid-template-columns: 64px 1fr;
+      margin-bottom: 34px;
+      padding: 28px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.15), transparent 54%),
+        rgba(255, 255, 255, 0.045);
+    }
+
+    .summary-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #38bdf8, #34d399);
+      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.22);
+    }
+
+    section {
+      position: relative;
+      padding: 32px 0 32px 34px;
+      border-top-color: rgba(226, 232, 240, 0.13);
+    }
+
+    section::before {
+      position: absolute;
+      top: 39px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--accent);
+      border-radius: 6px;
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    section:first-of-type::before {
+      top: 7px;
+    }
+
+    h2 {
+      font-size: clamp(1.42rem, 2.6vw, 2rem);
+    }
+
+    li::before {
+      border-radius: 4px;
+      background: linear-gradient(145deg, #38bdf8, #34d399);
+      transform: rotate(45deg);
+    }
+
+    .statement {
+      border-left: 0;
+      border: 1px solid rgba(251, 191, 36, 0.34);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(245, 158, 11, 0.18), transparent),
+        rgba(245, 158, 11, 0.08);
+      box-shadow: inset 0 0 28px rgba(245, 158, 11, 0.05);
+    }
+
+    .footer {
+      border-top-color: rgba(226, 232, 240, 0.14);
+      background: rgba(18, 26, 43, 0.78);
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 24px, 1040px);
+        padding: 18px 0;
+      }
+
+      .document {
+        border-radius: 24px;
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 28px 20px;
+      }
+
+      .hero::before {
+        display: none;
+      }
+
+      section {
+        padding-left: 24px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="document" aria-labelledby="policy-title">
+      <header class="hero">
+        <div class="badge">隐私优先</div>
+        <h1 id="policy-title">海星体育-赛事直播隐私政策</h1>
+        <p class="subtitle">
+          这是一份面向海星体育-赛事直播的隐私说明。我们的原则很简单：
+          不收集个人身份信息，不接入广告追踪，不出售、出租或共享你的个人数据。
+        </p>
+        <div class="policy-highlights" aria-label="隐私亮点">
+          <span>无广告追踪</span>
+          <span>无需账号</span>
+          <span>本机保存</span>
+        </div>
+      </header>
+
+      <div class="meta-grid" aria-label="政策详情">
+        <div class="meta-item">
+          <p class="meta-label">适用软件</p>
+          <p class="meta-value">海星体育-赛事直播</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">生效日期</p>
+          <p class="meta-value">2026年6月16日</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">联系邮箱</p>
+          <p class="meta-value"><a href="mailto:haixingsports@gmail.com">haixingsports@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="summary">
+          <div class="summary-icon" aria-hidden="true">✓</div>
+          <div>
+            <h2>不收集个人身份信息</h2>
+            <p>
+              海星体育-赛事直播用于浏览足球赛程、关注球队、设置开赛提醒、查看积分榜、记录比赛笔记和阅读观赛说明。
+              软件无需账号即可使用，不接入广告追踪，也不上传你的本地偏好和笔记。
+            </p>
+          </div>
+        </div>
+
+        <section>
+          <h2>1. 引言</h2>
+          <p>
+            本隐私政策说明你使用海星体育-赛事直播移动应用时，我们如何处理与隐私相关的事项。
+            我们希望隐私说明清晰、克制、容易理解，并与软件的实际功能保持一致。
+          </p>
+        </section>
+
+        <section>
+          <h2>2. 我们收集的信息</h2>
+          <p>
+            海星体育-赛事直播不收集姓名、手机号、邮箱、通讯录、照片、精确位置、设备广告标识符、
+            跨应用追踪数据、行为画像数据或用于识别个人身份的信息。
+          </p>
+          <ul>
+            <li>无需注册账号，也无需填写个人资料。</li>
+            <li>关注球队、提醒设置和比赛笔记仅保存在你的设备本机。</li>
+            <li>通知权限仅用于你主动设置的开赛提醒。</li>
+            <li>不接入第三方广告、分析、画像或跨应用追踪工具。</li>
+            <li>本软件不提供视频直播、回放、竞猜或体育投注服务。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. 信息如何使用</h2>
+          <p>
+            软件会在本机使用关注球队、提醒设置和比赛笔记来呈现“我的关注”、开赛通知和本地笔记。
+            这些内容不会被我们用于广告投放、用户画像、出售、出租、共享或商业化变现。
+          </p>
+        </section>
+
+        <section>
+          <h2>4. 数据共享与披露</h2>
+          <p>
+            我们不向广告商、数据经纪商或外部分析平台共享你的个人信息。由于本软件不运营保存个人资料的服务器，
+            也不会把你的本地关注、提醒或笔记上传给第三方。
+          </p>
+        </section>
+
+        <section>
+          <h2>5. 数据存储与安全</h2>
+          <p>
+            关注球队、提醒设置和比赛笔记保存在你的设备本机。你可以通过系统通知设置关闭提醒权限，
+            也可以通过卸载软件清除本地保存的应用数据。
+          </p>
+          <p class="statement">
+            简而言之：海星体育-赛事直播把观赛偏好尽量留在你的设备上。
+          </p>
+        </section>
+
+        <section>
+          <h2>6. 未成年人隐私</h2>
+          <p>
+            海星体育-赛事直播不会主动收集未成年人或其他用户的个人身份信息。若你认为有相关信息被误提供给我们，
+            可以通过本政策列明的邮箱联系我们。
+          </p>
+        </section>
+
+        <section>
+          <h2>7. 第三方服务</h2>
+          <p>
+            本软件不接入第三方广告网络、分析 SDK 或追踪工具。若你通过应用商店下载、更新或购买相关服务，
+            应用商店运营方可能依据其自身隐私政策处理必要信息，该处理不由海星体育-赛事直播控制。
+          </p>
+        </section>
+
+        <section>
+          <h2>8. 你的隐私权利</h2>
+          <p>
+            你可以在系统设置中管理通知权限，也可以删除本软件以清除本机应用数据。由于我们通常不持有可访问、
+            更正或删除的个人数据，你仍可就隐私问题通过邮箱联系我们。
+          </p>
+        </section>
+
+        <section>
+          <h2>9. 政策更新</h2>
+          <p>
+            我们可能会根据软件功能变化、法律要求或运营调整更新本隐私政策。若政策发生更新，
+            页面顶部的生效日期也会同步调整。
+          </p>
+        </section>
+
+        <section>
+          <h2>10. 联系我们</h2>
+          <p>
+            如果你对本隐私政策或海星体育-赛事直播的隐私实践有疑问，
+            请通过 <a href="mailto:haixingsports@gmail.com">haixingsports@gmail.com</a> 联系我们。
+          </p>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <span><strong>海星体育-赛事直播</strong> 隐私政策</span>
+        <span>生效日期：2026年6月16日</span>
+      </footer>
+    </article>
+  </main>
+</body>
+
+</html>
